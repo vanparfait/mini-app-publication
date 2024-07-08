@@ -1,0 +1,12 @@
+.posts-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.posts-container h1 {
+  text-align: center;
+}
+.posts-container .contenu {
+  display: flex;
+  flex-direction: column;
+}
