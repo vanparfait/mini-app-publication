@@ -8,7 +8,7 @@ interface PostsListProps {
 
 const PostsList: React.FC<PostsListProps> = ({ allPosts }) => {
   return (
-    <ul className="posts">
+    <ul className="post">
       {allPosts ? (
         allPosts.map((post) => <Post post={post} key={post.id} />)
       ) : (

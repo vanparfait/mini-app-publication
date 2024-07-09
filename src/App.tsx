@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Posts from "./pages/Posts";
-import Post from "./pages/Post";
+
+import PostDetail from "./pages/PostDetail";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Posts />} />
-          <Route path="/publication/:id" element={<Post />} />
+          <Route path="/publication/:id" element={<PostDetail />} />
         </Routes>
       </BrowserRouter>
     </div>

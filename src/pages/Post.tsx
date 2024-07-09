@@ -1,12 +1,24 @@
 import React from "react";
 import "../styles/Post.css";
+import { Link } from "react-router-dom";
 
-const Post: React.FC = ({ post }) => {
+interface PostPropss {
+  post: {
+    id: number;
+    title: string;
+    body: string;
+  };
+}
+
+const Post: React.FC<PostPropss> = ({ post }) => {
   return (
-    <ul className="post">
-      <li>{post.title}</li>
-      <h2>Lire l'article</h2>
-    </ul>
+    <li>
+      <h2>{post.title}</h2>
+      <p>{post.body}</p>
+      <p>
+        <Link to={`/publication/${post.id}`}>Lire l'article</Link>
+      </p>
+    </li>
   );
 };
 
