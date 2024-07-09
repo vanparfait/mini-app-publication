@@ -9,13 +9,7 @@ interface PostsListProps {
 const PostsList: React.FC<PostsListProps> = ({ allPosts }) => {
   return (
     <ul className="post">
-      {allPosts ? (
-        allPosts.map((post) => <Post post={post} key={post.id} />)
-      ) : (
-        <p style={{ color: "red", fontSize: 46, textAlign: "center" }}>
-          Pas encore de Posts disponible
-        </p>
-      )}
+      {allPosts && allPosts.map((post) => <Post post={post} key={post.id} />)}
     </ul>
   );
 };

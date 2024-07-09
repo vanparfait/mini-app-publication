@@ -18,10 +18,19 @@ const PostDetail: React.FC = () => {
   console.log(onePost);
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "green",
+        border: "1px solid black",
+        width: "600px",
+        margin: "0 auto",
+        marginTop: "200px",
+        paddingLeft: "10px",
+      }}
+    >
       <h1>Publication numero : {id}</h1>
       <h2>Titre: {onePost?.title}</h2>
-      <p>Titre: {onePost?.body}</p>
+      <h2>Body: {onePost?.body}</h2>
       <Link to="/">Retour a la page d'accueil</Link>
     </div>
   );
